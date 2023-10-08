@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:rgb(247, 244, 246);
+        }
+        .teams-card{
+            border:1px solid black;
+            padding:10px;
+       text-align: center;
+            margin: 10px;
+            border-radius:5px;
+            background-color: rgb(228, 235, 237);
+            color:rgb(15, 15, 15);
+            font-size:35px;
+        }
+        .app-title{
+            text-align:center;
+            color:rgb(20, 20, 20);  
+            font-size: 50px;
+        }
+        .list{
+            background-color:rgb(230, 202, 207);
+            padding:10px;
+            border-radius: 20px;
+         
+        }
+    </style>
+</head>
+<body>
+    <h1 class="app-title">Asia Cup Team 2023</h1>
+    <div class="list" id="list"></div>
+<script>
+    const teams = ['INDIA ','PAKISTAN','SRI LANKA','BANGLADESH','AFGHANISTAN','NEPAL']
+
+    const listElement = document.getElementById('list');
+    for(let i=0;i<teams.length;i++){
+    
+        listElement.innerHTML = listElement.innerHTML +
+        `
+        <div class='teams-card'>
+            TEAM ${teams[i]}
+            </div>
+      `
+    }
+
+    </script>
+</body>
+</html>
